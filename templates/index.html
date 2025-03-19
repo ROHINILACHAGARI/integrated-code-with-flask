@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Widget</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Chatbot Icon + Hover Message -->
+    <div class="chatbot-container">
+        <button class="chatbot-button" onclick="toggleChat()">💬</button>
+        <div class="chat-bubble">👋 Hello<br>Welcome to Gaint</div>
+    </div>
+    <!-- Chat Window (Initially Hidden) -->
+    <div class="chat-window" id="chatWindow" style="display:none;">
+        <div class="chat-header">
+            Gaint AI bot
+            <button class="close-btn" onclick="toggleChat()">✖</button>
+        </div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
